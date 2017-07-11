@@ -3,50 +3,36 @@
  * Name: Menu
  * Description: This file controls most of the menu for the module
  *
- * @package : Xoosla Modules
- * @Module : Xoosla Candy
+ * @package    : Xoosla Modules
+ * @Module     : Xoosla Candy
  * @subpackage : Admin
- * @since : v1.00
- * @author John Neill <catzwolf@xoosla.com>
- * @copyright : Copyright (C) 2010 Xoosla Modules. All rights reserved.
- * @license : GNU/LGPL, see docs/license.php
- * @version : $Id: menu.php 0000 21/06/2010 13:03:59 Catzwolf $
+ * @since      : v1.00
+ * @author     John Neill <catzwolf@xoosla.com>
+ * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
+ * @license    : GNU/LGPL, see docs/license.php
  */
-defined( 'XOOPS_ROOT_PATH' ) or die( 'Restricted access' );
+defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 
-$module_handler = &xoops_gethandler( 'module' );
-$xca_module = &$module_handler->getByDirname( basename( dirname( dirname( __FILE__ ) ) ) );
-$mid = $xca_module->getVar( 'mid' );
-$module = $xca_module->getVar( 'dirname' );
-unset( $xca_module );
-
-$adminmenu[] = array(
-    'absolute' => true,
-    'title' => _XL_MI_ADM_INDEX,
-    'link' => XOOPS_URL . '/modules/' . $module . '/admin/index.php',
-    'icon' => 'home.png'
-    );
+/** @var XoopsModuleHandler $moduleHandler */
+$moduleHandler = xoops_getHandler('module');
+$xca_module    = $moduleHandler->getByDirname(basename(dirname(__DIR__)));
+$mid           = $xca_module->getVar('mid');
+$module        = $xca_module->getVar('dirname');
+unset($xca_module);
 
 $adminmenu[] = array(
     'absolute' => true,
-    'title' => _XL_MI_ADM_ICONABOUT,
-    'link' => XOOPS_URL . '/modules/' . $module . '/admin/index.php?op=about',
-    'icon' => 'info.png'
-    );
+    'title'    => _XL_MI_ADM_INDEX,
+    'link'     => 'admin/index.php',
+    'icon'     => 'home.png'
+);
 
 $adminmenu[] = array(
     'absolute' => true,
-    'title' => _XL_MI_ADM_MODULETEMPLATES,
-    'link' => XOOPS_URL . '/modules/system/admin.php?fct=tplsets&op=listtpl&tplset=default&moddir=' . $module,
-    'icon' => 'tpls.png'
-    );
-
-$adminmenu[] = array(
-    'absolute' => true,
-    'title' => _XL_MI_ADM_MODULEUPDATE,
-    'link' => XOOPS_URL . '/modules/system/admin.php?fct=modulesadmin&op=update&module=' . $module,
-    'icon' => 'update.png'
-    );
+    'title'    => _XL_MI_ADM_ICONABOUT,
+    'link'     => 'admin/index.php?op=about',
+    'icon'     => 'info.png'
+);
 
 global $menus;
 // $menus['link'][] = array( 'thisisalink', _XL_MI_ADM_LINK );
@@ -59,4 +45,3 @@ global $menus;
  * Menu Tabs
  */
 // $menus['tab'][] = array( 'index.php', _XL_MI_ADM_INDEX );
-?>

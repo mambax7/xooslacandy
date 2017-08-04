@@ -59,3 +59,17 @@ define('_XL_MI_ADM_USEMACROS_DSC', 'Select which groups are allowed to use macro
 @define('XL_MI_XOOSLA_LEAD', 'John Neill');
 @define('XL_MI_XOOSLA_CREDITS', 'Module is based on RokCandy from Rockettheme');
 @define('XL_MI_XOOSLA_CONTRIBUTORS', '');
+
+
+//Help
+define('_MI_XOOSLA_DIRNAME', basename(dirname(dirname(__DIR__))));
+define('_MI_XOOSLA_HELP_HEADER', __DIR__.'/help/helpheader.tpl');
+define('_MI_XOOSLA_BACK_2_ADMIN', 'Back to Administration of ');
+define('_MI_XOOSLA_OVERVIEW', 'Overview');
+
+//define('_MI_XOOSLA_HELP_DIR', __DIR__);
+
+//help multi-page
+define('_MI_XOOSLA_DISCLAIMER', 'Disclaimer');
+define('_MI_XOOSLA_LICENSE', 'License');
+define('_MI_XOOSLA_SUPPORT', 'Support');

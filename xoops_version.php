@@ -89,6 +89,14 @@ $modversion['hasComments'] = 0;
  */
 $modversion['hasNotification'] = 0;
 
+// ------------------- Help files ------------------- //
+$modversion['helpsection'] = array(
+    ['name' => _MI_XOOSLA_OVERVIEW, 'link' => 'page=help'],
+    ['name' => _MI_XOOSLA_DISCLAIMER, 'link' => 'page=disclaimer'],
+    ['name' => _MI_XOOSLA_LICENSE, 'link' => 'page=license'],
+    ['name' => _MI_XOOSLA_SUPPORT, 'link' => 'page=support'],
+);
+
 /**
  * Blocks
  */

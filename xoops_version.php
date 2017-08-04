@@ -19,7 +19,7 @@ defined('XOOPS_ROOT_PATH') || exit('Restricted access');
 $modversion['version']             = 1.00;
 $modversion['requires']            = 1.00;
 $modversion['module_status']       = 'Beta 1';
-$modversion['release_date']        = '';
+$modversion['release_date']        = '2017/05/14';
 $modversion['name']                = _XL_XCA_CANDY;
 $modversion['description']         = _XL_XCA_CANDY_DSC;
 $modversion['author']              = XL_MI_XOOSLA_AUTHOR;

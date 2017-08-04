@@ -2,9 +2,9 @@
         'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>"/>
-    <meta http-equiv="content-language" content="<{$xoops_langcode}>"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="<{xoAppUrl /modules/system/style.css}>"/>
+    <meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>">
+    <meta http-equiv="content-language" content="<{$xoops_langcode}>">
+    <link rel="stylesheet" type="text/css" media="screen" href="<{xoAppUrl /modules/system/style.css}>">
     <script type="text/javascript">
         /**
          *
@@ -35,7 +35,7 @@
             <td style="text-align: left;"><{$candy.xca_html}></td>
             <td style="text-align: center;"><a title="<{$smarty.const._XL_AD_XCA_INSERTMACRO}>" href="#"
                                                onclick="javascript:add('<{$candy.xca_macro}>');return false;">
-                    <img src="<{xooslaIcons 16/icon-16-download.png}>" alt="<{$smarty.const._XL_AD_XCA_INSERTMACRO}>"/>
+                    <img src="<{xooslaIcons 16/icon-16-download.png}>" alt="<{$smarty.const._XL_AD_XCA_INSERTMACRO}>">
                 </a></td>
         </tr>
         <{foreachelse}>

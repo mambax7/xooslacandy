@@ -17,7 +17,7 @@
             <th style="width: 70px;"><{$smarty.const._XL_AD_XCA_WEIGHT}></th>
             <th style="width: 20px;"><input name="checkall" id="checkall"
                                             onClick="xoopsCheckAll( 'adminform', 'checkall');" type="checkbox"
-                                            value=""/></th>
+                                            value=""></th>
         </tr>
         </thead>
         <tbody>
@@ -28,12 +28,12 @@
                 <td style="text-align: left;"><{$candy.macro}></td>
                 <td style="text-align: left;"><{$candy.tpl}></td>
                 <td><img id="loading_sml<{$candy.id}>" src="<{xooslaIcons spinner.gif}>" style="display:none;"
-                         title="<{$smarty.const._XL_AD_SYS_LOADING}>" alt="<{$smarty.const._XL_AD_SYS_LOADING}>"/><img
+                         title="<{$smarty.const._XL_AD_SYS_LOADING}>" alt="<{$smarty.const._XL_AD_SYS_LOADING}>"><img
                             class="cursorpointer tooltip" style="cursor:pointer;" id="sml<{$candy.id}>"
                             onClick="system_setStatus( { op: 'publish', xca_id: <{$candy.id}> }, 'sml<{$candy.id}>', 'index.php' )"
                             src="<{if $candy.active}><{xooslaIcons 16/icon-16-yes.png}><{else}><{xooslaIcons 16/icon-16-no.png}><{/if}>"
                             alt="<{if $candy.active}><{$smarty.const._XL_AD_SYS_TURNOFF}><{else}><{$smarty.const._XL_AD_SYS_TURNON}><{/if}>"
-                            title="<{if $candy.active}><{$smarty.const._XL_AD_SYS_TURNOFF}><{else}><{$smarty.const._XL_AD_SYS_TURNON}><{/if}>"/>
+                            title="<{if $candy.active}><{$smarty.const._XL_AD_SYS_TURNOFF}><{else}><{$smarty.const._XL_AD_SYS_TURNON}><{/if}>">
                 </td>
                 <td><{$candy.weight}></td>
                 <td><{$candy.checkbox}></td>
@@ -51,8 +51,8 @@
     <{if $navigation}><{$navigation.records}><{/if}>
     <!--<{includeq file="$dirpath/xoosla_legend.tpl"}>-->
     <{includeq file="$dirpath/xoosla_footer.tpl"}>
-    <input type="hidden" id="op" name="op" value="display"/>
-    <input type="hidden" id="start" name="start" value="<{$start}>"/>
-    <input type="hidden" name="boxchecked" value="0"/>
+    <input type="hidden" id="op" name="op" value="display">
+    <input type="hidden" id="start" name="start" value="<{$start}>">
+    <input type="hidden" name="boxchecked" value="0">
     <{$securityToken}>
 </form>

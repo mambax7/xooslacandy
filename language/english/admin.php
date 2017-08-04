@@ -58,13 +58,11 @@ $code = htmlspecialchars('<b>{This is some text}</b>');
 define('_XL_AD_EXCA_HTML', 'Html Code:');
 define('_XL_AD_EXCA_HTML_DSC', "Enter the html Equivalent of the BBCode Macro. <br> Example: {$code}");
 define('_XL_AD_EXCA_ACTIVE', 'Activate Macro?');
-define('_XL_AD_EXCA_ACTIVE_DSC',
-       'If set to no, the macro will not be displayed or used when rendering text. <br>Remember, is you use this macro at any stage and turn this off, <br>the macro will show but not be converted to html.');
+define('_XL_AD_EXCA_ACTIVE_DSC', 'If set to no, the macro will not be displayed or used when rendering text. <br>Remember, is you use this macro at any stage and turn this off, <br>the macro will show but not be converted to html.');
 define('_XL_AD_EXCA_WEIGHT', 'Macro Order:');
 define('_XL_AD_EXCA_WEIGHT_DSC', 'Set the display order of the macro and in which order the macro will be used.');
 define('_XL_AD_EXCA_GROUPS', 'Permissions: ');
-define('_XL_AD_EXCA_GROUPS_DSC',
-       'Select which groups may have permission to use this macro when editing text.<br> If a user doesn\'t have permission they will not see the macro within the Xoosla candy Macro window.');
+define('_XL_AD_EXCA_GROUPS_DSC', 'Select which groups may have permission to use this macro when editing text.<br> If a user doesn\'t have permission they will not see the macro within the Xoosla candy Macro window.');
 // Tips
 define('_XL_AD_XCA_TIPS', '
 <ul id="newsticker" class="newsticker">

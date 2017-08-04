@@ -6,6 +6,6 @@
     <{if $content}>
         <{$content}>
     <{/if}>
-    <input type="hidden" id="op" name="op" value="display"/>
+    <input type="hidden" id="op" name="op" value="display">
     <{includeq file="$dirpath/xoosla_footer.tpl"}>
 </form>

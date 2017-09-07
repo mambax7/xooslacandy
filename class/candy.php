@@ -14,7 +14,7 @@
 
 use Xmf\Request;
 
-defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 /**
  * CandyController
@@ -62,11 +62,11 @@ class CandyController extends XooslaController
     public function edit()
     {
         $this->_view->setTemplate('xca_candyform.tpl');
-        $this->_view->setMenus(array(
+        $this->_view->setMenus([
                                    'cancel' => _XL_AD_ICO_CANCEL,
                                    'save'   => _XL_AD_ICO_SAVE,
                                    'apply'  => _XL_AD_ICO_APPLY
-                               ));
+                               ]);
         $this->_view->addBreadcrumb(_XL_AD_XCA_MAINAREA, $_SERVER['PHP_SELF']);
         $this->_view->addBreadcrumb(_XL_AD_NAV_EDIT);
         $this->_view->setTips(_XL_AD_XCA_TIPS);
@@ -128,13 +128,13 @@ class CandyController extends XooslaController
         }
 
         $this->_view->setTemplate('xca_candylist.tpl');
-        $this->_view->setMenus(array(
+        $this->_view->setMenus([
                                    'create'    => _XL_AD_ICO_NEW,
                                    'edit'      => _XL_AD_ICO_EDIT,
                                    'delete'    => _XL_AD_ICO_DELETE,
                                    'duplicate' => _XL_AD_ICO_DUPLICATE,
                                    'update'    => _XL_AD_ICO_UPDATE
-                               ));
+                               ]);
         $this->_view->setNavigation($obj['count'], $nav['limit'], $nav['start']);
         $this->_view->addBreadcrumb(_XL_AD_XCA_MAINAREA, $_SERVER['PHP_SELF']);
         $this->_view->setTips(_XL_AD_XCA_TIPS);

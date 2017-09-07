@@ -11,7 +11,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 /**
  * Module Details
  */
@@ -90,12 +90,12 @@ $modversion['hasComments'] = 0;
 $modversion['hasNotification'] = 0;
 
 // ------------------- Help files ------------------- //
-$modversion['helpsection'] = array(
+$modversion['helpsection'] = [
     ['name' => _MI_XOOSLA_OVERVIEW, 'link' => 'page=help'],
     ['name' => _MI_XOOSLA_DISCLAIMER, 'link' => 'page=disclaimer'],
     ['name' => _MI_XOOSLA_LICENSE, 'link' => 'page=license'],
     ['name' => _MI_XOOSLA_SUPPORT, 'link' => 'page=support'],
-);
+];
 
 /**
  * Blocks
@@ -111,11 +111,11 @@ $modversion['helpsection'] = array(
 /**
  * Module Configuration
  */
-$modversion['config'][] = array(
+$modversion['config'][] = [
     'name'        => 'usemacros',
     'title'       => '_XL_MI_ADM_USEMACROS',
     'description' => '_XL_MI_ADM_USEMACROS_DSC',
     'formtype'    => 'group_multi',
     'valuetype'   => 'array',
-    'default'     => array('1 2 3')
-);
+    'default'     => ['1 2 3']
+];

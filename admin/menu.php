@@ -11,7 +11,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 /** @var XoopsModuleHandler $moduleHandler */
 $moduleHandler = xoops_getHandler('module');
@@ -20,19 +20,19 @@ $mid           = $xca_module->getVar('mid');
 $module        = $xca_module->getVar('dirname');
 unset($xca_module);
 
-$adminmenu[] = array(
+$adminmenu[] = [
     'absolute' => true,
     'title'    => _XL_MI_ADM_INDEX,
     'link'     => 'admin/index.php',
     'icon'     => 'home.png'
-);
+];
 
-$adminmenu[] = array(
+$adminmenu[] = [
     'absolute' => true,
     'title'    => _XL_MI_ADM_ICONABOUT,
     'link'     => 'admin/index.php?op=about',
     'icon'     => 'info.png'
-);
+];
 
 global $menus;
 // $menus['link'][] = array( 'thisisalink', _XL_MI_ADM_LINK );

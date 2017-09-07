@@ -58,7 +58,7 @@ switch ($op) {
         break;
 
     case 'updateall':
-        $xooslaModel->updateall(array('xca_weight', 'xca_active'));
+        $xooslaModel->updateall(['xca_weight', 'xca_active']);
         break;
 
     case 'save':
@@ -80,11 +80,11 @@ switch ($op) {
         $tlist->AddHeader('', '', 'center', 2);
         $tlist->AddHeader('action', '', 'center', false);
         $tlist->addFooter();
-        $button = array('edit', 'delete', 'duplicate');
+        $button = ['edit', 'delete', 'duplicate'];
         $_obj   = $xooslaModel->handler->getObj($_REQUEST, true);
         if ($_obj['count'] && count($_obj['list'])) {
             foreach ($_obj['list'] as $obj) {
-                $tlist->add(array(
+                $tlist->add([
                                 $obj->getVar('xca_id'),
                                 $obj->getVar('xca_mid'),
                                 $obj->getVar('xca_macro', 'e'),
@@ -93,7 +93,7 @@ switch ($op) {
                                 $obj->getTextBox('xca_id', 'xca_weight', '2'),
                                 $obj->getCheckBox('xca_id'),
                                 xoosla_displayIcon($button, 'xca_id', $obj->getVar('xca_id'))
-                            ));
+                            ]);
             }
         }
         // Html Output here

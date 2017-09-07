@@ -12,7 +12,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access');
+defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 /**
  * Long Description
@@ -105,7 +105,7 @@ class CandyModel extends XooslaObjectHandler
             $args['search'] = $GLOBALS['xoopsDB']->escape($args['search']);
             if (isset($args['andor']) && $args['andor'] !== 'exact') {
                 $temp_queries = preg_split('/[\s,]+/', $args['search']);
-                $queryarray   = array();
+                $queryarray   = [];
                 foreach ($temp_queries as $q) {
                     $q = trim($q);
                     if (strlen($q) >= 5) {
@@ -113,7 +113,7 @@ class CandyModel extends XooslaObjectHandler
                     }
                 }
             } else {
-                $queryarray = array(trim($GLOBALS['xoopsDB']->escape($args['search'])));
+                $queryarray = [trim($GLOBALS['xoopsDB']->escape($args['search']))];
             }
             $criteriaSearch = self::searchCriteria($queryarray, $args['andor'], true, $criteria);
         }

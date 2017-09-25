@@ -98,12 +98,12 @@ class CandyModel extends XooslaObjectHandler
         $obj = false;
 
         $criteria = new CriteriaCompo();
-        if ($args['search'] == _XL_AD_TOOBAR_FILTER) {
+        if (_XL_AD_TOOBAR_FILTER == $args['search']) {
             $args['search'] = '';
         }
         if (!empty($args['search'])) {
             $args['search'] = $GLOBALS['xoopsDB']->escape($args['search']);
-            if (isset($args['andor']) && $args['andor'] !== 'exact') {
+            if (isset($args['andor']) && 'exact' !== $args['andor']) {
                 $temp_queries = preg_split('/[\s,]+/', $args['search']);
                 $queryarray   = [];
                 foreach ($temp_queries as $q) {

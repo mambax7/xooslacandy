@@ -24,7 +24,7 @@ define('_XCA_MODULE_URL', $GLOBALS['xoops']->url('/modules/' . _XCA_MODULE_DIR))
 define('_XCA_MODULE_CLASS', 'xca_');
 
 $result = xca_CheckResource($upgrade);
-if ($result === true) {
+if (true === $result) {
     $file = $GLOBALS['xoops']->pathExists(XOOPS_ROOT_PATH . '/modules/xooslacore/core/bootini.php', E_USER_WARNING);
     if ($file) {
         require_once $GLOBALS['xoops']->path('/modules/xooslacore/core/bootini.php');
@@ -77,7 +77,7 @@ function xca_CheckResource($upgrade = false)
     }
 
     if ($ret > 0) {
-        if ($upgrade === true) {
+        if (true === $upgrade) {
             return false;
         } else {
             switch ($ret) {
@@ -92,12 +92,12 @@ function xca_CheckResource($upgrade = false)
                     break;
             } // switch
             include XOOPS_ROOT_PATH . '/header.php';
-            echo ($xoopsUserIsAdmin === true) ? $text : _XL_ER_XCA_TECHISSUES;
+            echo (true === $xoopsUserIsAdmin) ? $text : _XL_ER_XCA_TECHISSUES;
             include XOOPS_ROOT_PATH . '/footer.php';
             exit();
         }
 
-        return ($isUpgrade === true) ? true : false;
+        return (true === $isUpgrade) ? true : false;
     } else {
         return true;
     }

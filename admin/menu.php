@@ -14,11 +14,21 @@
 defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 /** @var XoopsModuleHandler $moduleHandler */
-$moduleHandler = xoops_getHandler('module');
-$xca_module    = $moduleHandler->getByDirname(basename(dirname(__DIR__)));
-$mid           = $xca_module->getVar('mid');
-$module        = $xca_module->getVar('dirname');
-unset($xca_module);
+//$moduleHandler = xoops_getHandler('module');
+//$xca_module    = $moduleHandler->getByDirname(basename(dirname(__DIR__)));
+//$mid           = $xca_module->getVar('mid');
+//$module        = $xca_module->getVar('dirname');
+//unset($xca_module);
+
+use XoopsModules\Xooslacandy;
+
+require_once __DIR__ . '/../class/Helper.php';
+//require_once __DIR__ . '/../include/common.php';
+$helper = Xooslacandy\Helper::getInstance();
+
+$pathIcon32 = \Xmf\Module\Admin::menuIconPath('');
+$pathModIcon32 = $helper->getModule()->getInfo('modicons32');
+
 
 $adminmenu[] = [
     'absolute' => true,

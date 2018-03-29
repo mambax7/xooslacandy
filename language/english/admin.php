@@ -11,7 +11,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
+defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /**
  * Module Resource Errors
@@ -54,7 +54,7 @@ define('_XL_AD_WFC_TOTALCANDIES', 'Total Candy Marcos: ');
 define('_XL_AD_EXCA_FORM', 'Candy Form');
 define('_XL_AD_EXCA_MACRO', 'BBCode Macro:');
 define('_XL_AD_EXCA_MACRO_DSC', 'Enter the BBcode for this Macro. <br> Example: [b]{text}[/b]');
-$code = htmlspecialchars('<b>{This is some text}</b>');
+$code = htmlspecialchars('<b>{This is some text}</b>', ENT_QUOTES | ENT_HTML5);
 define('_XL_AD_EXCA_HTML', 'Html Code:');
 define('_XL_AD_EXCA_HTML_DSC', "Enter the html Equivalent of the BBCode Macro. <br> Example: {$code}");
 define('_XL_AD_EXCA_ACTIVE', 'Activate Macro?');

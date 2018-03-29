@@ -11,7 +11,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
+defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /** @var XoopsModuleHandler $moduleHandler */
 //$moduleHandler = xoops_getHandler('module');
@@ -22,7 +22,7 @@ defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
 
 use XoopsModules\Xooslacandy;
 
-require_once __DIR__ . '/../class/Helper.php';
+// require_once __DIR__ . '/../class/Helper.php';
 //require_once __DIR__ . '/../include/common.php';
 $helper = Xooslacandy\Helper::getInstance();
 

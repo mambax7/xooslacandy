@@ -11,7 +11,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
+defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 define('_XL_XCA_CANDY', 'Xoosla Candy');
 define('_XL_XCA_CANDY_DSC', 'Adds the ability to add BBCode type code into textareas.');

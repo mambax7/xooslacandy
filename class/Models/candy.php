@@ -12,7 +12,7 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
-defined('XOOPS_ROOT_PATH') || exit('Restricted access.');
+defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /**
  * Long Description
@@ -75,13 +75,13 @@ class CandyModel extends XooslaObjectHandler
     {
         static $channels;
         if (!$channels) {
-            $criteria = new CriteriaCompo();
-            $criteria->add(new Criteria('xca_active', 1, '='));
+            $criteria = new \CriteriaCompo();
+            $criteria->add(new \Criteria('xca_active', 1, '='));
             $criteria->setSort($sort);
             $criteria->setOrder($order);
             $criteria->setStart($start);
             $criteria->setLimit($start);
-            $channels = $this->getObjects($criteria);
+            $channels =& $this->getObjects($criteria);
         }
 
         return $channels;
@@ -97,7 +97,7 @@ class CandyModel extends XooslaObjectHandler
     {
         $obj = false;
 
-        $criteria = new CriteriaCompo();
+        $criteria = new \CriteriaCompo();
         if (_XL_AD_TOOBAR_FILTER == $args['search']) {
             $args['search'] = '';
         }
@@ -124,7 +124,7 @@ class CandyModel extends XooslaObjectHandler
             $criteria->setStart($args['start']);
             $criteria->setLimit($args['limit']);
         }
-        $obj['list'] = $this->getObjects($criteria, true);
+        $obj['list'] =& $this->getObjects($criteria, true);
 
         return $obj;
     }
@@ -139,15 +139,15 @@ class CandyModel extends XooslaObjectHandler
      */
     public function searchCriteria($queryarray, $andor = '', $moreChecks, &$criteria)
     {
-        $criteriaSearch = new CriteriaCompo();
+        $criteriaSearch = new \CriteriaCompo();
         if (isset($queryarray[0])) {
-            $criteriaSearch->add(new Criteria('xca_macro', "%$queryarray[0]%", 'LIKE'), 'OR');
-            $criteriaSearch->add(new Criteria('xca_html', "%$queryarray[0]%", 'LIKE'), 'OR');
+            $criteriaSearch->add(new \Criteria('xca_macro', "%$queryarray[0]%", 'LIKE'), 'OR');
+            $criteriaSearch->add(new \Criteria('xca_html', "%$queryarray[0]%", 'LIKE'), 'OR');
         }
         if (!empty($andor)) {
             for ($i = 1, $iMax = count($queryarray); $i < $iMax; ++$i) {
-                $criteriaSearch->add(new Criteria('xca_macro', "%$queryarray[0]%", 'LIKE'), 'OR');
-                $criteriaSearch->add(new Criteria('xca_html', "%$queryarray[0]%", 'LIKE'), 'OR');
+                $criteriaSearch->add(new \Criteria('xca_macro', "%$queryarray[0]%", 'LIKE'), 'OR');
+                $criteriaSearch->add(new \Criteria('xca_html', "%$queryarray[0]%", 'LIKE'), 'OR');
             }
         }
         $criteria->add($criteriaSearch);

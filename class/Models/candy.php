@@ -81,7 +81,7 @@ class CandyModel extends XooslaObjectHandler
             $criteria->setOrder($order);
             $criteria->setStart($start);
             $criteria->setLimit($start);
-            $channels =& $this->getObjects($criteria);
+            $channels = $this->getObjects($criteria);
         }
 
         return $channels;
@@ -124,7 +124,7 @@ class CandyModel extends XooslaObjectHandler
             $criteria->setStart($args['start']);
             $criteria->setLimit($args['limit']);
         }
-        $obj['list'] =& $this->getObjects($criteria, true);
+        $obj['list'] = $this->getObjects($criteria, true);
 
         return $obj;
     }

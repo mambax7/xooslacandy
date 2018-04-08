@@ -11,12 +11,15 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use \Xmf\Request;
+
 include __DIR__ . '/header.php';
 
 error_reporting(0);
 $GLOBALS['xoopsLogger']->activated = false;
 
-if (!isset($_SERVER['HTTP_REFERER'])) {
+if (!isset(Request::getString('HTTP_REFERER', '', 'SERVER'))) {
     exit();
 }
 

@@ -22,8 +22,8 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 use XoopsModules\Xooslacandy;
 
-// require_once __DIR__ . '/../class/Helper.php';
-//require_once __DIR__ . '/../include/common.php';
+// require_once  dirname(__DIR__) . '/class/Helper.php';
+//require_once  dirname(__DIR__) . '/include/common.php';
 $helper = Xooslacandy\Helper::getInstance();
 
 $pathIcon32 = \Xmf\Module\Admin::menuIconPath('');

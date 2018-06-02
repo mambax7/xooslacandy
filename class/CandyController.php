@@ -1,4 +1,5 @@
-<?php
+<?php namespace XoopsModules\Xooslacandy;
+
 /**
  * Name: Xoosla Candy Controller
  * Description:
@@ -13,6 +14,7 @@
  */
 
 use Xmf\Request;
+use XoopsModules\Xooslacore;
 
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
@@ -25,7 +27,7 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
  * @version   $Id$
  * @access    public
  */
-class CandyController extends XooslaController
+class CandyController extends Xooslacore\Core\XooslaController
 {
     public $_helper;
     public $_view;
@@ -44,7 +46,7 @@ class CandyController extends XooslaController
      */
     public function publish()
     {
-        $xca_id = XooslaRequest::doRequest($_REQUEST, 'xca_id', 0, 'int');
+        $xca_id = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'xca_id', 0, 'int');
         if ($xca_id > 0) {
             $obj = $this->_model->get($xca_id);
             $old = $obj->getVar('xca_active');
@@ -104,12 +106,12 @@ class CandyController extends XooslaController
      */
     public function display()
     {
-        $nav['sort']   = XooslaRequest::doRequest($_REQUEST, 'sort', 'xca_id', 'textbox');
-        $nav['start']  = XooslaRequest::doRequest($_REQUEST, 'start', 0, 'int');
-        $nav['order']  = XooslaRequest::doRequest($_REQUEST, 'order', 'ASC', 'textbox');
-        $nav['limit']  = XooslaRequest::doRequest($_REQUEST, 'limit', 10, 'int');
-        $nav['search'] = XooslaRequest::doRequest($_REQUEST, 'search', '', 'textbox');
-        $nav['andor']  = XooslaRequest::doRequest($_REQUEST, 'andor', 'OR', 'textbox');
+        $nav['sort']   = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'sort', 'xca_id', 'textbox');
+        $nav['start']  = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'start', 0, 'int');
+        $nav['order']  = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'order', 'ASC', 'textbox');
+        $nav['limit']  = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'limit', 10, 'int');
+        $nav['search'] = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'search', '', 'textbox');
+        $nav['andor']  = \XoopsModules\Xooslacore\XooslaRequest::doRequest($_REQUEST, 'andor', 'OR', 'textbox');
 
         $obj = $this->_model->getObj($nav);
         if ($obj['count'] && count($obj['list'])) {
@@ -118,7 +120,6 @@ class CandyController extends XooslaController
                 $candy['mid']      = $item->getVar('xca_mid');
                 $candy['macro']    = $item->getVar('xca_macro', 'e');
                 $candy['html']     = $item->getVar('xca_html', 'e');
-                $candy['weight']   = $item->getTextBox('xca_id', 'xca_weight', '2');
                 $candy['weight']   = $item->getTextBox('xca_id', 'xca_weight', '2');
                 $candy['active']   = $item->getVar('xca_active');
                 $candy['checkbox'] = $item->getCheckBox('xca_id');

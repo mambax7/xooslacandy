@@ -13,7 +13,6 @@ CREATE TABLE `xca_candy` (
 )
   ENGINE = MyISAM
   DEFAULT CHARSET = utf8
-  COMMENT = 'Xoosla Candy table'
   AUTO_INCREMENT = 1;
 
 #

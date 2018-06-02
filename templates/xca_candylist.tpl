@@ -1,16 +1,16 @@
-<{includeq file="$dirpath/xoosla_header.tpl"}>
+<{include file="$dirpath/xoosla_header.tpl"}>
 <form action="index.php" method="post" name="adminform" id="adminform" <{$onsubmit}> >
     <{securityToken}><{*//mb*}>
-    <{includeq file="$dirpath/xoosla_intro.tpl"}>
-    <{includeq file="$dirpath/xoosla_menu.tpl"}>
+    <{include file="$dirpath/xoosla_intro.tpl"}>
+    <{include file="$dirpath/xoosla_menu.tpl"}>
     <{if $toolbar}>
-        <{includeq file="$dirpath/xoosla_toolbar.tpl"}>
+        <{include file="$dirpath/xoosla_toolbar.tpl"}>
     <{/if}>
     <table id="xo-candylist-sorter" cellspacing="1" class="outer tablesorter">
         <thead>
         <tr style="text-align: center;">
             <th style="width: 40px;"><{$smarty.const._XL_AD_XCA_ID}></th>
-            <!--<th><{$smarty.const._XL_AD_XCA_MID}></th>-->
+            <{*<th><{$smarty.const._XL_AD_XCA_MID}></th>*}>
             <th style="width: 25%;"><{$smarty.const._XL_AD_XCA_MACRO}></th>
             <th><{$smarty.const._XL_AD_XCA_HTML}></th>
             <th style="width: 70px;"><{$smarty.const._XL_AD_XCA_ACTIVE}></th>
@@ -24,7 +24,7 @@
         <{foreach item=candy from=$candy}>
             <tr style="text-align: center;" class="<{cycle values='even,odd'}>">
                 <td><{$candy.id}></td>
-                <!--<td><{$candy.mid}></td>-->
+                <{*<td><{$candy.mid}></td>*}>
                 <td style="text-align: left;"><{$candy.macro}></td>
                 <td style="text-align: left;"><{$candy.tpl}></td>
                 <td><img id="loading_sml<{$candy.id}>" src="<{xooslaIcons spinner.gif}>" style="display:none;"
@@ -49,8 +49,8 @@
         </tr>
     </table>
     <{if $navigation}><{$navigation.records}><{/if}>
-    <!--<{includeq file="$dirpath/xoosla_legend.tpl"}>-->
-    <{includeq file="$dirpath/xoosla_footer.tpl"}>
+    <{*<{include file="$dirpath/xoosla_legend.tpl"}>*}>
+    <{include file="$dirpath/xoosla_footer.tpl"}>
     <input type="hidden" id="op" name="op" value="display">
     <input type="hidden" id="start" name="start" value="<{$start}>">
     <input type="hidden" name="boxchecked" value="0">

@@ -1,4 +1,4 @@
-<?php
+<?php namespace XoopsModules\Xooslacandy\Models;
 /**
  * Name: Xoosla Candy Model Class
  * Description:
@@ -11,9 +11,12 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacore;
+
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
-XooslaLoad('modules.xooslacore.core.model');
+//Xooslacore\XooslaLoad('modules.xooslacore.core.model');
 
 /**
  * XooslaCandyModel
@@ -24,7 +27,7 @@ XooslaLoad('modules.xooslacore.core.model');
  * @version   $Id$
  * @access    public
  */
-class CandyModel extends XooslaModel
+class CandyModel extends Xooslacore\XooslaModel
 {
     /**
      * Constructor

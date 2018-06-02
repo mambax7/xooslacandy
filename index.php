@@ -12,19 +12,22 @@
  * @license    : GNU/LGPL, see docs/license.php
  */
 
-use \Xmf\Request;
+use Xmf\Request;
+use XoopsModules\Xooslacore;
+use XoopsModules\Xooslacore\Core;
 
 include __DIR__ . '/header.php';
 
 error_reporting(0);
 $GLOBALS['xoopsLogger']->activated = false;
 
-if (!isset(Request::getString('HTTP_REFERER', '', 'SERVER'))) {
-    exit();
-}
+//if (null !== Request::getString('HTTP_REFERER', '', 'SERVER')) {
+//    exit();
+//}
 
 $upgrade = false;
 require_once XOOPS_ROOT_PATH . '/modules/' . $GLOBALS['xoopsModule']->getVar('dirname') . '/include/functions.php';
-$xoosla = XooslaLoad::getClass('kernel');
+
+$xoosla = new \XoopsModules\Xooslacore\XooslaKernel();
 $xoosla->setTask('frontDisplay');
 $xoosla->__C('candy');

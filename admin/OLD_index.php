@@ -13,21 +13,23 @@
  */
 
 use Xmf\Request;
+use XoopsModules\Xooslacandy;
+use XoopsModules\Xooslacore;
 
 include __DIR__ . '/admin_header.php';
 
 /**
  * Instance the call back
  */
-$handler     = &xoosla_loadHandler('candy', _MODULE_DIR, _MODULE_CLASS);
-$xooslaModel = &xoosla_loadObjectCallback($handler, $mhandler);
+$handler     = xoosla_loadHandler('candy', _MODULE_DIR, _MODULE_CLASS);
+$xooslaModel = xoosla_loadObjectCallback($handler, $mhandler);
 $xooslaModel->mHandler->setMenu(0);
 $xooslaModel->mHandler->addHeader(_XL_XCA_MAINAREA);
 
 /**
  * Switch
  */
-$op = XooslaRequest::getString('op', 'default');
+$op = \Xmf\Request::getString('op', 'default');
 switch ($op) {
     case 'help':
         $xooslaModel->help();

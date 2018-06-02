@@ -25,11 +25,11 @@ $moduleDirNameUpper   = strtoupper($moduleDirName); //$capsDirName
 
 
 /** @var \XoopsDatabase $db */
-/** @var Xooslacandy\Helper $helper */
-/** @var Xooslacandy\Utility $utility */
+/** @var \XoopsModules\Xooslacandy\Helper $helper */
+/** @var \XoopsModules\Xooslacandy\Utility $utility */
 $db      = \XoopsDatabaseFactory::getDatabaseConnection();
-$helper  = Xooslacandy\Helper::getInstance();
-$utility = new Xooslacandy\Utility();
+$helper  = \XoopsModules\Xooslacandy\Helper::getInstance();
+$utility = new \XoopsModules\Xooslacandy\Utility();
 //$configurator = new Xooslacandy\Common\Configurator();
 
 $helper->loadLanguage('common');

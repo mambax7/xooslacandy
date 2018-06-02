@@ -11,8 +11,38 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacore;
+use XoopsModules\Xooslacore\Core;
+
 include __DIR__ . '/admin_header.php';
 
-$xoosla = XooslaLoad::getClass('kernel');
-// $xoosla->setTask( 'display' );
+//$xoosla = Xooslacore\Core\XooslaLoad::getClass('kernel');
+
+$xoosla = new \XoopsModules\Xooslacore\XooslaKernel();
+
+/**
+ * Switch
+ */
+/*
+$op = Xooslacore\XooslaRequest::getString('op', 'default');
+switch ($op) {
+    case 'help':
+        $xooslaModel->help();
+        break;
+
+    case 'about':
+//        $xooslaModel->help();
+        require __DIR__ .'/'.$op.'.php';
+        break;
+
+    case 'default':
+        $xoosla->setTask( 'display' );
+        $xoosla->__C('candy');
+}
+*/
+//$xoosla->setTask( 'display' );
 $xoosla->__C('candy');
+
+
+

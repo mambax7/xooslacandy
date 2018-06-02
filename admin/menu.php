@@ -11,6 +11,9 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacandy;
+
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /** @var XoopsModuleHandler $moduleHandler */
@@ -20,11 +23,11 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
 //$module        = $xca_module->getVar('dirname');
 //unset($xca_module);
 
-use XoopsModules\Xooslacandy;
 
 // require_once  dirname(__DIR__) . '/class/Helper.php';
 //require_once  dirname(__DIR__) . '/include/common.php';
-$helper = Xooslacandy\Helper::getInstance();
+/** @var \XoopsModules\Xooslacandy\Helper $helper */
+$helper = \XoopsModules\Xooslacandy\Helper::getInstance();
 
 $pathIcon32 = \Xmf\Module\Admin::menuIconPath('');
 $pathModIcon32 = $helper->getModule()->getInfo('modicons32');

@@ -12,6 +12,8 @@
  * @license    : GNU/LGPL, see docs/license.php
  */
 include  dirname(dirname(dirname(__DIR__))) . '/include/cp_header.php';
+//require_once  dirname(__DIR__) . '/include/common.php';
+
 $upgrade = false;
 
 require_once XOOPS_ROOT_PATH . '/modules/' . $GLOBALS['xoopsModule']->getVar('dirname') . '/include/functions.php';

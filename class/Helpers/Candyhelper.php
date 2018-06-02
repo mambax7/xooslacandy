@@ -1,4 +1,5 @@
-<?php
+<?php namespace XoopsModules\Xooslacandy\Helpers;
+
 /**
  * Name: Candy Helper Class
  * Description:
@@ -11,6 +12,9 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacore;
+
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /**
@@ -21,7 +25,7 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
  * @version    $Id$
  * @access     public
  */
-class Candyhelper extends XooslaHelper
+class Candyhelper extends Xooslacore\Core\XooslaHelper
 {
     /**
      *

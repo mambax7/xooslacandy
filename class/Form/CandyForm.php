@@ -11,9 +11,12 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacore;
+
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
-$form = new XooslaThemeForm(_XL_AD_EXCA_FORM, 'adminform', 'index.php');
+$form = new Xooslacore\Forms\XooslaThemeForm(_XL_AD_EXCA_FORM, 'adminform', 'index.php');
 /**
  * Hidden elements
  */
@@ -34,7 +37,8 @@ $candy_weight = new \XoopsFormText(_XL_AD_EXCA_WEIGHT, 'xca_weight', 5, 5, $this
 $candy_weight->setDescription(_XL_AD_EXCA_WEIGHT_DSC);
 $form->addElement($candy_weight, false);
 
-$group = XooslaLoad::getClass('permissions');
+//$group = Xooslacore\Core\XooslaLoad::getClass('permissions');
+$group = new XoopsModules\Xooslacore\XooslaPermissions();
 $group->setPermissions('', 'candy_read', '', $GLOBALS['xoopsModule']->getVar('mid'));
 
 //$groups = new \XoopsFormSelectCheckGroup( _XL_AD_EXCA_WEIGHT_DSC, 'candy_read', true, $group->getAdmin( $this->getVar( 'xca_id' ) ), 5, true );

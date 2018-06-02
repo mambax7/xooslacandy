@@ -1,4 +1,4 @@
-<?php
+<?php namespace XoopsModules\Xooslacandy\Views;
 /**
  * Name:
  * Description:
@@ -11,6 +11,10 @@
  * @copyright  : Copyright (C) 2010 Xoosla Modules. All rights reserved.
  * @license    : GNU/LGPL, see docs/license.php
  */
+
+use XoopsModules\Xooslacandy;
+use XoopsModules\Xooslacore;
+
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
 /**
@@ -22,7 +26,7 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
  * @version   $Id$
  * @access    public
  */
-class CandyView extends XooslaView
+class CandyView extends Xooslacore\Core\XooslaView
 {
     /**
      * Constructor
@@ -37,6 +41,6 @@ class CandyView extends XooslaView
      */
     public function displayPopUps()
     {
-        echo $this->fetch($GLOBALS['xoops']->path('modules' . DS . $GLOBALS['xoopsModule']->getVar('dirname') . DS . 'templates' . DS . $this->template));
+        echo $this->fetch($GLOBALS['xoops']->path('modules/' . $GLOBALS['xoopsModule']->getVar('dirname') .  '/templates/' . $this->template));
     }
 }

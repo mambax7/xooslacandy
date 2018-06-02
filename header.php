@@ -10,9 +10,11 @@
 // URL: http:www.Xoops.com                                              //
 // Project: Xoops Project                                               //
 // -------------------------------------------------------------------------//
-include dirname(dirname(__DIR__)) . DIRECTORY_SEPARATOR . 'mainfile.php';
+
+include dirname(dirname(__DIR__)) . '/mainfile.php';
+//require_once XOOPS_ROOT_PATH . '/header.php';
 
 $upgrade = false;
 require_once XOOPS_ROOT_PATH . '/modules/' . $GLOBALS['xoopsModule']->getVar('dirname') . '/include/functions.php';
 
-xoops_loadLanguage('main', 'wfresource');
+xoops_loadLanguage('main', 'xooslacore');

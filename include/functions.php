@@ -13,21 +13,24 @@
  */
 defined('XOOPS_ROOT_PATH') || die('Restricted access');
 
+$moduleDirName = basename(dirname(__DIR__));
+
 $language = $GLOBALS['xoopsConfig']['language'];
 if (!isset($language)) {
     xoops_setConfigOption('language', 'english');
 }
-
-define('_XCA_MODULE_DIR', basename(dirname(__DIR__)));
-define('_XCA_MODULE_PATH', $GLOBALS['xoops']->path('/modules/' . _XCA_MODULE_DIR));
-define('_XCA_MODULE_URL', $GLOBALS['xoops']->url('/modules/' . _XCA_MODULE_DIR));
-define('_XCA_MODULE_CLASS', 'xca_');
-
+//if (!defined('_XCA_MODULE_DIR')) {
+//    define('_XCA_MODULE_DIR', $moduleDirName);
+    define('_XCANDY_MODULE_DIR', $moduleDirName);
+    define('_XCA_MODULE_PATH', $GLOBALS['xoops']->path('/modules/' . $moduleDirName));
+    define('_XCA_MODULE_URL', $GLOBALS['xoops']->url('/modules/' . $moduleDirName));
+    define('_XCA_MODULE_CLASS', 'xca_');
+//}
 $result = xca_CheckResource($upgrade);
 if (true === $result) {
-    $file = $GLOBALS['xoops']->pathExists(XOOPS_ROOT_PATH . '/modules/xooslacore/core/bootini.php', E_USER_WARNING);
+    $file = $GLOBALS['xoops']->pathExists(XOOPS_ROOT_PATH . '/modules/xooslacore/class/Core/bootini.php', E_USER_WARNING);
     if ($file) {
-        require_once $GLOBALS['xoops']->path('/modules/xooslacore/core/bootini.php');
+        require_once $GLOBALS['xoops']->path('/modules/xooslacore/class/Core/bootini.php');
     }
 } else {
     include XOOPS_ROOT_PATH . '/header.php';
@@ -48,13 +51,13 @@ function xca_CheckResource($upgrade = false)
 
     /** @var XoopsModuleHandler $moduleHandler */
     $moduleHandler = xoops_getHandler('module');
-    $module        = $moduleHandler->getByDirname(_XCA_MODULE_DIR);
+    $module        = $moduleHandler->getByDirname(_XCANDY_MODULE_DIR);
     /**
      * XooslaCore Module
      */
-    /** @var XoopsModuleHandler $moduleHandler */
-    $moduleHandler = xoops_getHandler('module');
-    $module        = $moduleHandler->getByDirname(_XCA_MODULE_DIR);
+//    /** @var XoopsModuleHandler $moduleHandler */
+//    $moduleHandler = xoops_getHandler('module');
+//    $module        = $moduleHandler->getByDirname(_XCANDY_MODULE_DIR);
     $xooslaCore    = $moduleHandler->getByDirname('xooslacore');
 
     /**

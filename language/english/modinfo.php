@@ -28,7 +28,7 @@ Software and its documentation made available on Xoosla Module Project web site:
    6. Could include technical or other mistakes, inaccuracies or typographical errors. Xoosla Module Project may make changes to the software or documentation made available on its web site.
    7. May be out of date, and Xoosla Module Project makes no commitment to update such materials.
 
-The Xoosla Module Project assumes no responsibility for errors or ommissions in the software or documentation available from its web site.
+The Xoosla Module Project assumes no responsibility for errors or omissions in the software or documentation available from its web site.
 
 In no event shall Xoosla Module Project be liable to you or any third parties for any special, punitive, incidental, indirect or consequential damages of any kind, or any damages whatsoever, including, without limitation, those resulting from loss of use, data or profits, whether or not Xoosla Module Project has been advised of the possibility of such damages, and on any theory of liability, arising out of or in connection with the use of this software.
 

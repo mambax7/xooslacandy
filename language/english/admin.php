@@ -18,7 +18,7 @@ defined('XOOPS_ROOT_PATH') || die('Restricted access');
  */
 $url = '<a href="http://code.google.com/p/xoosla-modules/downloads/list" title="Download WF-Resource">download</a>';
 
-define('_XL_ER_XCA_TECHISSUES', '<h3>Techincal Issues</h3>Sorry, but we seem to be having some techincal issues with this part of our website.<br><br>Please report this problem to the webmaster.');
+define('_XL_ER_XCA_TECHISSUES', '<h3>Technical Issues</h3>Sorry, but we seem to be having some technical issues with this part of our website.<br><br>Please report this problem to the webmaster.');
 define('_XL_ER_XCA_MISSING_MODULE', '<h3>Warning: Module Required!</h3>
 <p>Why am I seeing this message rather than my expected module?</p>
 <p>This module requires another module to function correctly. Xoosla Candy had determined that the Xoosla Core Module has not been installed or has not been installed correctly.</p>
@@ -47,7 +47,7 @@ define('_XL_AD_XCA_INSERTMACRO', 'Insert Macro');
  */
 define('_XL_AD_XCA_MAINAREA', 'Candy Management');
 define('_XL_AD_XCA_MAINAREA_DSC', 'Manage your candy store here');
-define('_XL_AD_WFC_TOTALCANDIES', 'Total Candy Marcos: ');
+define('_XL_AD_WFC_TOTALCANDIES', 'Total Candy Macros: ');
 
 /**
  */
